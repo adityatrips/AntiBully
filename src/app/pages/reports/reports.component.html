@@ -1,0 +1,34 @@
+<h1>Review Reports</h1>
+<div class="report" *ngFor="let report of reports">
+  <p>
+    Informant Name: <b>{{ report.informantName }}</b>
+  </p>
+  <p>
+    Informant Contact: <b>{{ report.informantContact }}</b>
+  </p>
+  <p>
+    Victim Name: <b>{{ report.victimName }}</b>
+  </p>
+  <ul>
+    <h5>Incident Description</h5>
+    <li *ngFor="let point of report.incidentDesc.split('\n')">
+      {{ point }}
+    </li>
+  </ul>
+
+  <ul>
+    <h5>Expectations</h5>
+    <li *ngFor="let point of report.expectations.split('\n')">
+      {{ point }}
+    </li>
+  </ul>
+  <ul>
+    <h5>Steps Taken</h5>
+    <li *ngFor="let point of report.stepsTaken.split('\n')">
+      {{ point }}
+    </li>
+  </ul>
+  <button (click)="removeRep(report._id)" class="button-primary fw">
+    Remove
+  </button>
+</div>

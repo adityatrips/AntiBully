@@ -1,0 +1,28 @@
+<h1>Review Articles</h1>
+<div class="article" *ngFor="let article of info">
+  <p>
+    Author: <b>{{ article.author.stuff }}</b>
+  </p>
+  <p>
+    Brief: <b>{{ article.brief.stuff }}</b>
+  </p>
+  <p>
+    Body: <b>{{ article.body.stuff }}</b>
+  </p>
+  <p>
+    IsModerated: <b>{{ article.isModerated.stuff }}</b>
+  </p>
+
+  <div class="row">
+    <div class="six columns">
+      <button (click)="accept(article.id)" class="button-primary fw">
+        Approve
+      </button>
+    </div>
+    <div class="six columns">
+      <button (click)="deny(article.id)" class="button-primary fw">
+        Reject
+      </button>
+    </div>
+  </div>
+</div>
