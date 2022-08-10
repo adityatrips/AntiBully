@@ -1,0 +1,66 @@
+<div class="body">
+  <div class="container">
+    <div class="container-body secondary article-buttons">
+      <h5 class="primary-color tac">Feel free to guide people!</h5>
+      <form>
+        <div class="row">
+          <label class="primary-color"
+            >What title would you like to give?</label
+          >
+          <input
+            [(ngModel)]="title"
+            [ngModelOptions]="{ standalone: true }"
+            required
+            type="text"
+            class="u-full-width cust-sec-inp"
+          />
+        </div>
+        <div class="row">
+          <label class="primary-color">Provide a brief for the article.</label>
+          <input
+            [(ngModel)]="brief"
+            [ngModelOptions]="{ standalone: true }"
+            required
+            type="text"
+            class="u-full-width cust-sec-inp"
+          />
+        </div>
+        <div class="row">
+          <label class="primary-color">Start writing.</label>
+          <textarea
+            [(ngModel)]="body"
+            [ngModelOptions]="{ standalone: true }"
+            required
+            type="text"
+            class="u-full-width cust-sec-inp"
+          ></textarea>
+        </div>
+        <div class="row">
+          <label class="primary-color">What can we call you, author?</label>
+          <input
+            [(ngModel)]="author"
+            [ngModelOptions]="{ standalone: true }"
+            required
+            type="text"
+            class="u-full-width cust-sec-inp"
+          />
+        </div>
+        <div class="row">
+          <div class="six columns">
+            <a (click)="addReport()" class="cust-sec-btn button u-full-width"
+              >Post the article</a
+            >
+          </div>
+          <div class="six columns">
+            <a
+              routerLink="/read-published-articles"
+              class="cust-sec-btn button u-full-width"
+              >Read published articles</a
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

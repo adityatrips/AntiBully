@@ -1,0 +1,71 @@
+<div class="container nav-container">
+  <nav class="flex nav">
+    <div (click)="toggleSidebar()" class="menu flex">
+      <span class="app-icon">menu</span>
+    </div>
+    <span routerLink="/" style="cursor: pointer" class="logo heading"
+      >Anti Bullying Portal</span
+    >
+    <div class="nav-items flex">
+      <a
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink="/"
+        class="nav-items-item"
+        >Home</a
+      >
+      <a
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink="/from-principals-desk"
+        class="nav-items-item tac"
+        >From Principal's Desk</a
+      >
+      <a
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink="/reports"
+        class="nav-items-item"
+        >Reports</a
+      >
+      <a
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink="/articles"
+        class="nav-items-item"
+        >Articles</a
+      >
+      <a
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLink="/counselor"
+        class="nav-items-item"
+        >Get Counselled</a
+      >
+    </div>
+  </nav>
+  <div class="sidebar">
+    <a (click)="hideSidebar()" routerLink="/" class="sidebar-item">Home</a>
+    <a
+      (click)="hideSidebar()"
+      routerLink="/from-principals-desk"
+      class="sidebar-item"
+      >From Principal's Desk</a
+    >
+    <a (click)="hideSidebar()" routerLink="/reports" class="sidebar-item"
+      >Reports</a
+    >
+    <a (click)="hideSidebar()" routerLink="/articles" class="sidebar-item"
+      >Articles</a
+    >
+    <a (click)="hideSidebar()" routerLink="/counselor" class="sidebar-item"
+      >Get Counselled</a
+    >
+  </div>
+  <div
+    (click)="toggleSidebar()"
+    class="sidebar-backdrop"
+    id="sidebar-backdrop"
+    style="display: none"
+  ></div>
+</div>

@@ -1,0 +1,77 @@
+<div class="body">
+  <div class="container">
+    <div class="report-buttons secondary container-body">
+      <h5 class="primary-color tac">If you'd like to report, feel free!</h5>
+      <form>
+        <div class="row">
+          <div class="six columns">
+            <label class="primary-color">What is your name?</label>
+            <input
+              [(ngModel)]="informantName"
+              [ngModelOptions]="{ standalone: true }"
+              required
+              type="text"
+              class="u-full-width cust-sec-inp"
+            />
+          </div>
+          <div class="six columns">
+            <label class="primary-color">What is your email address?</label>
+            <input
+              [(ngModel)]="informantContact"
+              [ngModelOptions]="{ standalone: true }"
+              required
+              type="text"
+              class="u-full-width cust-sec-inp"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <label class="primary-color">What is the victim's name?</label>
+          <input
+            [(ngModel)]="victimName"
+            [ngModelOptions]="{ standalone: true }"
+            required
+            type="text"
+            class="u-full-width cust-sec-inp"
+          />
+        </div>
+        <div class="row">
+          <label class="primary-color">What actually happened?</label>
+          <textarea
+            [(ngModel)]="incidentDesc"
+            [ngModelOptions]="{ standalone: true }"
+            required
+            type="text"
+            class="u-full-width cust-sec-inp"
+          ></textarea>
+        </div>
+        <div class="row">
+          <label class="primary-color"
+            >Did anyone stand up against the act? How?</label
+          >
+          <textarea
+            [(ngModel)]="stepsTaken"
+            [ngModelOptions]="{ standalone: true }"
+            required
+            type="text"
+            class="u-full-width cust-sec-inp"
+          ></textarea>
+        </div>
+        <div class="row">
+          <label class="primary-color">What are your expectations?</label>
+          <textarea
+            [(ngModel)]="expectations"
+            [ngModelOptions]="{ standalone: true }"
+            required
+            type="text"
+            class="u-full-width cust-sec-inp"
+          ></textarea>
+        </div>
+      </form>
+      <a (click)="addReport()" class="cust-sec-btn button u-full-width"
+        >Report Here</a
+      >
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,11 @@
+@import "../../../styles/globals";
+.por {
+  position: relative;
+  height: calc(100vh - $header-height);
+}
+.full-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

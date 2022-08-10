@@ -1,0 +1,23 @@
+<div
+  style="margin: 2em auto"
+  class="container secondary container-body article-body"
+>
+  <h5>
+    Title
+    <h6 [innerText]="this.replaceAll(article.title)"></h6>
+  </h5>
+
+  <h5>
+    Brief
+    <h6 [innerText]="'Article brief: ' + this.replaceAll(article.brief)"></h6>
+  </h5>
+
+  <div class="hr-sec"></div>
+  <p [innerText]="this.replaceAll(article.body)" class="taj"></p>
+  <div class="hr-sec"></div>
+  <h5>
+    Author
+    <h6 [innerText]="this.replaceAll(article.author)"></h6>
+  </h5>
+</div>
+<app-footer></app-footer>

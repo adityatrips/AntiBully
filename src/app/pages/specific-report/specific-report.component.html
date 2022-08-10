@@ -1,0 +1,15 @@
+<div
+  style="margin: 2em auto"
+  class="container secondary container-body report-body"
+>
+  <h5>Details</h5>
+  <h6>Victim's name: - {{ report.victimName }}</h6>
+  <div class="hr-sec"></div>
+  <h5>Incident Description</h5>
+  <p [innerHTML]="this.replaceAll(report.incidentDesc)" class="taj"></p>
+  <h5>Steps Taken</h5>
+  <p [innerHTML]="this.replaceAll(report.stepsTaken)" class="taj"></p>
+  <h5>Expectations</h5>
+  <p [innerHTML]="this.replaceAll(report.expectations)" class="taj"></p>
+</div>
+<app-footer></app-footer>

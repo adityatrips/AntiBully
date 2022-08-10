@@ -1,0 +1,22 @@
+.profile {
+  max-width: 250px;
+  height: auto;
+  border-radius: 50%;
+}
+.fd {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.ml1 {
+  text-align: justify;
+  margin-left: 1em;
+}
+@media screen and (max-width: 425px) {
+  .fd {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

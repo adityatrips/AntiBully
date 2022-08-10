@@ -1,0 +1,14 @@
+@import "../styles/colors";
+@import "../styles/globals";
+
+.landing-background {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url("../assets/images/bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

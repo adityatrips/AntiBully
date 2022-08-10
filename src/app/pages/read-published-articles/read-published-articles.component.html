@@ -1,0 +1,21 @@
+<div class="body">
+  <div class="container">
+    <div
+      *ngFor="let art of articles"
+      style="margin-bottom: 1em"
+      class="container-body secondary article-buttons"
+    >
+      <h4 class="primary-color tac">{{ art.title }}</h4>
+      <h5 style="text-align: left" class="primary-color">{{ art.brief }}</h5>
+      <h6 style="text-align: right" class="primary-color">
+        Author: {{ art.author }}
+      </h6>
+      <a
+        [routerLink]="'/article/' + art._id"
+        class="cust-sec-btn button u-full-width"
+        >Read More</a
+      >
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,83 @@
+@import "../../../styles/colors";
+@import "../../../styles/globals";
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.menu {
+  display: none;
+}
+.nav {
+  height: $header_height;
+  &-container {
+    z-index: 999;
+  }
+  &-items {
+    &-item {
+      transition: 0.2s;
+      margin-right: 1.5em;
+      cursor: pointer;
+      &:hover {
+        color: $secondary;
+      }
+      &.active {
+        position: relative;
+        color: $secondary;
+      }
+      &.active::before {
+        content: "";
+        width: 100%;
+        height: 0.15em;
+        background-color: $secondary;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        border-radius: 0 0 0.25em 0.25em;
+      }
+      &:last-child {
+        margin-right: 0 !important;
+      }
+    }
+  }
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 2;
+  width: 70%;
+  height: 100vh;
+  background-color: $primary;
+  transition: 0.5s left;
+
+  &-backdrop {
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background: $secondary;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s opacity;
+  }
+  &-item {
+    display: block;
+    padding: 1em 1.5em;
+    color: $secondary;
+    transition: 0.2s;
+    &:hover {
+      background-color: $secondary;
+      color: $primary;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .nav-items {
+    display: none;
+  }
+  .menu {
+    display: flex !important;
+  }
+}
